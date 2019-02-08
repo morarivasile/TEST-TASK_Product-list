@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OffersTableViewHeaderView" customModule="Morari_Vasile_Test_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAC-AD-cYM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <color key="backgroundColor" red="0.93845367431640625" green="0.93563610315322876" blue="0.96245056390762329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-yo-gJk" userLabel="Top Separator">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lGa-4G-8B3"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNz-cy-HEb">
+                    <rect key="frame" x="16" y="1" width="343" height="28"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwG-Mf-vkP" userLabel="Bottom Separator">
+                    <rect key="frame" x="0.0" y="29" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HN8-mp-dDt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="PwG-Mf-vkP" firstAttribute="top" secondItem="JNz-cy-HEb" secondAttribute="bottom" id="2Pm-iX-bqx"/>
+                <constraint firstItem="jAC-AD-cYM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5tC-XY-3Xe"/>
+                <constraint firstItem="jAC-AD-cYM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7vp-XI-ecE"/>
+                <constraint firstItem="JNz-cy-HEb" firstAttribute="top" secondItem="WYK-yo-gJk" secondAttribute="bottom" id="AB5-dS-VQE"/>
+                <constraint firstItem="WYK-yo-gJk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BZc-bW-jlZ"/>
+                <constraint firstItem="JNz-cy-HEb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="GEk-kx-Wzb"/>
+                <constraint firstAttribute="trailing" secondItem="PwG-Mf-vkP" secondAttribute="trailing" id="LVK-0l-tX9"/>
+                <constraint firstItem="jAC-AD-cYM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Ldc-FF-WKR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JNz-cy-HEb" secondAttribute="trailing" constant="16" id="VA9-gy-Vnv"/>
+                <constraint firstItem="PwG-Mf-vkP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="d6W-Vr-Dkc"/>
+                <constraint firstItem="PwG-Mf-vkP" firstAttribute="bottom" secondItem="jAC-AD-cYM" secondAttribute="bottom" id="kAG-Kp-TZn"/>
+                <constraint firstItem="jAC-AD-cYM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="l1z-mb-Aiy"/>
+                <constraint firstItem="WYK-yo-gJk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="p4m-en-BKw"/>
+                <constraint firstAttribute="trailing" secondItem="WYK-yo-gJk" secondAttribute="trailing" id="u8W-z7-1g4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="titleLabel" destination="JNz-cy-HEb" id="Ff8-WV-9le"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-132.23388305847078"/>
+        </view>
+    </objects>
+</document>

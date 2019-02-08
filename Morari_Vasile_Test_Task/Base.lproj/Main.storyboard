@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MasterViewController" customModule="Morari_Vasile_Test_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="Xkh-pb-qbe">
+                                <rect key="frame" x="8" y="20" width="266" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V0h-fx-klK"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="185-nS-xY0"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWS-ej-hEv">
+                                <rect key="frame" x="282" y="34" width="22" height="22"/>
+                                <connections>
+                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySI-Tk-fal"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vv-TX-JEM">
+                                <rect key="frame" x="0.0" y="70" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qHz-tT-gKg"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="C3O-qI-yMP" kind="embed" id="lub-6V-m0R"/>
+                                </connections>
+                            </containerView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8TK-qS-UMF">
+                                <rect key="frame" x="0.0" y="108" width="320" height="175"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="xzB-E4-L5p"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="LQf-Nb-cin" customClass="SnappingFlowLayout" customModule="Morari_Vasile_Test_Task" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qQq-eU-NFu"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mlm-AW-FCg">
+                                <rect key="frame" x="0.0" y="283" width="320" height="285"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RkO-PH-VRS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1vv-TX-JEM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0VM-98-sZX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mlm-AW-FCg" secondAttribute="bottom" id="4on-f0-ynn"/>
+                            <constraint firstItem="oWS-ej-hEv" firstAttribute="leading" secondItem="Xkh-pb-qbe" secondAttribute="trailing" constant="8" id="9YD-fW-sAX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oWS-ej-hEv" secondAttribute="trailing" constant="16" id="GqD-Wx-jan"/>
+                            <constraint firstItem="Mlm-AW-FCg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rhr-uk-RXM"/>
+                            <constraint firstItem="8TK-qS-UMF" firstAttribute="top" secondItem="1vv-TX-JEM" secondAttribute="bottom" constant="8" id="SDi-Do-F0h"/>
+                            <constraint firstItem="Mlm-AW-FCg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WwR-tw-iJ9"/>
+                            <constraint firstItem="8TK-qS-UMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bga-kL-aJK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1vv-TX-JEM" secondAttribute="trailing" id="dAE-gW-o3B"/>
+                            <constraint firstItem="Xkh-pb-qbe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gFH-bP-yjL"/>
+                            <constraint firstItem="Mlm-AW-FCg" firstAttribute="top" secondItem="8TK-qS-UMF" secondAttribute="bottom" id="gRi-fF-9ot"/>
+                            <constraint firstItem="oWS-ej-hEv" firstAttribute="centerY" secondItem="Xkh-pb-qbe" secondAttribute="centerY" id="h9T-t0-QgZ"/>
+                            <constraint firstItem="1vv-TX-JEM" firstAttribute="top" secondItem="Xkh-pb-qbe" secondAttribute="bottom" id="mOO-xu-eKq"/>
+                            <constraint firstItem="Xkh-pb-qbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="pd2-8i-LRP"/>
+                            <constraint firstItem="8TK-qS-UMF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uHs-uY-p9Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xcm-5W-TXr"/>
+                    <connections>
+                        <outlet property="bannersCollectionView" destination="8TK-qS-UMF" id="x6T-kq-jZU"/>
+                        <outlet property="offersTableView" destination="Mlm-AW-FCg" id="6gd-jb-yT6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.5832083958021"/>
+        </scene>
+        <!--Empty View Controller-->
+        <scene sceneID="9GN-oQ-aN9">
+            <objects>
+                <viewController storyboardIdentifier="EmptyScreenControllerId" id="4Pl-19-3FI" customClass="EmptyViewController" customModule="Morari_Vasile_Test_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1E-sS-2ao">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a4l-vw-QVv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFO-FJ-udx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="133"/>
+        </scene>
+        <!--Categories Buttons Controller-->
+        <scene sceneID="edV-p6-Hls">
+            <objects>
+                <viewController storyboardIdentifier="CategoriesButtonsController" id="C3O-qI-yMP" customClass="CategoriesButtonsController" customModule="Morari_Vasile_Test_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oB3-gQ-z0p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPf-tS-vPM" customClass="RoundedSelectableButton" customModule="Morari_Vasile_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="68" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Топ 10"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTintColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTintColor">
+                                        <color key="value" red="0.275706946849823" green="0.52694129943847656" blue="0.94212144613265991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="C3O-qI-yMP" eventType="touchUpInside" id="GB2-WY-q1B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcd-Lm-o2c" customClass="RoundedSelectableButton" customModule="Morari_Vasile_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="100" y="0.0" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jgV-bJ-Mq5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Магазины"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTintColor">
+                                        <color key="value" red="0.27570694680000002" green="0.52694129940000001" blue="0.94212144610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="C3O-qI-yMP" eventType="touchUpInside" id="QhY-CX-JQB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgk-1M-ChB" customClass="RoundedSelectableButton" customModule="Morari_Vasile_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="236" y="0.0" width="68" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Товары"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTintColor">
+                                        <color key="value" red="0.27570694680000002" green="0.52694129940000001" blue="0.94212144610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="C3O-qI-yMP" eventType="touchUpInside" id="CF7-Rl-eEd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="MPf-tS-vPM" firstAttribute="top" secondItem="oB3-gQ-z0p" secondAttribute="top" id="6A5-jG-ZBE"/>
+                            <constraint firstItem="MPf-tS-vPM" firstAttribute="leading" secondItem="oB3-gQ-z0p" secondAttribute="leading" constant="16" id="AZW-g7-jCa"/>
+                            <constraint firstItem="lgk-1M-ChB" firstAttribute="top" secondItem="oB3-gQ-z0p" secondAttribute="top" id="Kdg-Na-yXg"/>
+                            <constraint firstItem="Gcd-Lm-o2c" firstAttribute="bottom" secondItem="oB3-gQ-z0p" secondAttribute="bottomMargin" id="ROL-Du-Cfl"/>
+                            <constraint firstAttribute="trailing" secondItem="lgk-1M-ChB" secondAttribute="trailing" constant="16" id="RgA-lP-y9p"/>
+                            <constraint firstItem="lgk-1M-ChB" firstAttribute="leading" secondItem="Gcd-Lm-o2c" secondAttribute="trailing" constant="16" id="VEq-9Q-w7Y"/>
+                            <constraint firstItem="Gcd-Lm-o2c" firstAttribute="centerX" secondItem="oB3-gQ-z0p" secondAttribute="centerX" id="ZMV-KR-HVB"/>
+                            <constraint firstAttribute="bottom" secondItem="lgk-1M-ChB" secondAttribute="bottom" id="bZI-6t-DYq"/>
+                            <constraint firstItem="Gcd-Lm-o2c" firstAttribute="leading" secondItem="MPf-tS-vPM" secondAttribute="trailing" constant="16" id="fTf-BK-qKH"/>
+                            <constraint firstAttribute="bottom" secondItem="MPf-tS-vPM" secondAttribute="bottom" id="rNY-ky-ohh"/>
+                            <constraint firstItem="Gcd-Lm-o2c" firstAttribute="top" secondItem="oB3-gQ-z0p" secondAttribute="topMargin" id="rQb-1s-bJ8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i7b-bY-4K2"/>
+                    </view>
+                    <connections>
+                        <outlet property="productsButton" destination="lgk-1M-ChB" id="Gd6-Iq-AnC"/>
+                        <outlet property="shopsButton" destination="Gcd-Lm-o2c" id="WPY-2h-cwa"/>
+                        <outlet property="top10Button" destination="MPf-tS-vPM" id="QsC-tN-8sJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ru0-fv-G5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079" y="604"/>
+        </scene>
+    </scenes>
+</document>

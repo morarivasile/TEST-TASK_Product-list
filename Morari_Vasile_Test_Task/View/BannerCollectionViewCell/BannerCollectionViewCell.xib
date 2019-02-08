@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCollectionViewCell" id="Wgz-UY-baF" customClass="BannerCollectionViewCell" customModule="Morari_Vasile_Test_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v21-NG-xsf">
+                        <rect key="frame" x="8" y="8" width="204" height="124"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7j-p1-liO">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="124"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdD-ZL-7rd">
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="124"/>
+                                    </imageView>
+                                    <visualEffectView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="r17-gP-ifd">
+                                        <rect key="frame" x="0.0" y="76" width="204" height="48"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nde-3B-Imb">
+                                            <rect key="frame" x="0.0" y="0.0" width="204" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вода" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHI-pO-5bN">
+                                                    <rect key="frame" x="8" y="8" width="188" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вода - источник жизни!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQD-QV-orf">
+                                                    <rect key="frame" x="8" y="24" width="188" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="yQD-QV-orf" secondAttribute="bottom" constant="8" id="4Sg-rM-xne"/>
+                                                <constraint firstItem="DHI-pO-5bN" firstAttribute="top" secondItem="nde-3B-Imb" secondAttribute="top" constant="8" id="4wX-wJ-64O"/>
+                                                <constraint firstAttribute="trailing" secondItem="yQD-QV-orf" secondAttribute="trailing" constant="8" id="SOT-TV-1mY"/>
+                                                <constraint firstItem="yQD-QV-orf" firstAttribute="leading" secondItem="nde-3B-Imb" secondAttribute="leading" constant="8" id="XsS-Hu-Dl6"/>
+                                                <constraint firstItem="DHI-pO-5bN" firstAttribute="leading" secondItem="nde-3B-Imb" secondAttribute="leading" constant="8" id="efZ-zn-waA"/>
+                                                <constraint firstAttribute="trailing" secondItem="DHI-pO-5bN" secondAttribute="trailing" constant="8" id="rJp-2w-Xy0"/>
+                                            </constraints>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Kef-ek-uKU"/>
+                                        </constraints>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rdD-ZL-7rd" secondAttribute="trailing" id="CEg-db-jSi"/>
+                                    <constraint firstItem="r17-gP-ifd" firstAttribute="leading" secondItem="x7j-p1-liO" secondAttribute="leading" id="LhE-88-q8C"/>
+                                    <constraint firstItem="rdD-ZL-7rd" firstAttribute="top" secondItem="x7j-p1-liO" secondAttribute="top" id="N10-f5-P6F"/>
+                                    <constraint firstAttribute="bottom" secondItem="r17-gP-ifd" secondAttribute="bottom" id="TyT-IN-Mxc"/>
+                                    <constraint firstAttribute="trailing" secondItem="r17-gP-ifd" secondAttribute="trailing" id="VSl-yu-aNY"/>
+                                    <constraint firstAttribute="bottom" secondItem="rdD-ZL-7rd" secondAttribute="bottom" id="pOU-NM-g6f"/>
+                                    <constraint firstItem="rdD-ZL-7rd" firstAttribute="leading" secondItem="x7j-p1-liO" secondAttribute="leading" id="yDe-gh-eTr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x7j-p1-liO" secondAttribute="trailing" id="Jtq-oz-Gpb"/>
+                            <constraint firstItem="x7j-p1-liO" firstAttribute="top" secondItem="v21-NG-xsf" secondAttribute="top" id="aXt-98-FsJ"/>
+                            <constraint firstAttribute="bottom" secondItem="x7j-p1-liO" secondAttribute="bottom" id="nwI-Cx-Gjg"/>
+                            <constraint firstItem="x7j-p1-liO" firstAttribute="leading" secondItem="v21-NG-xsf" secondAttribute="leading" id="ydm-pR-2gO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="v21-NG-xsf" secondAttribute="trailing" constant="8" id="4WN-HR-env"/>
+                <constraint firstItem="v21-NG-xsf" firstAttribute="top" secondItem="Wgz-UY-baF" secondAttribute="top" constant="8" id="LiK-PS-63P"/>
+                <constraint firstItem="v21-NG-xsf" firstAttribute="leading" secondItem="Wgz-UY-baF" secondAttribute="leading" constant="8" id="TTT-LF-wvM"/>
+                <constraint firstAttribute="bottom" secondItem="v21-NG-xsf" secondAttribute="bottom" constant="8" id="YcH-fT-Qa3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="3X8-1z-JBh"/>
+            <size key="customSize" width="234" height="179"/>
+            <connections>
+                <outlet property="blurEffectView" destination="r17-gP-ifd" id="mSD-AY-jtq"/>
+                <outlet property="customMaskView" destination="x7j-p1-liO" id="9si-YK-Res"/>
+                <outlet property="imageVIew" destination="rdD-ZL-7rd" id="55d-4b-PsG"/>
+                <outlet property="shadowView" destination="v21-NG-xsf" id="tNR-wP-YlU"/>
+                <outlet property="subtitleLabel" destination="yQD-QV-orf" id="7y7-aH-rUk"/>
+                <outlet property="titleLabel" destination="DHI-pO-5bN" id="NP8-MS-S6m"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="187.1064467766117"/>
+        </collectionViewCell>
+    </objects>
+</document>
